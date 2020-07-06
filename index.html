@@ -3,47 +3,58 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Beginner Cue Sports</title>
+  <title>Cue Sports United</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+  <div id="header">
+    <div class="header-inner">
+      <img class="logo" src="images/Logo/csu logo low res white.png">
+
+      <h1 class="logo-text">Cue Sports United</h1>
+      </a>
+    </div>
+  </div>
+
+
   <div class="sidebar">
-    <ol>
-      <article>
-        <h3>
-          Sighting
-        </h3>
-      </article>
-      <li>
-        <a href="Dominant-Eye-Test.html">Dominant Eye Test</a>
-      </li>
-      <li>
-        Finding the Central Line and Eye Patterns
-      </li>
-      <li>
-        Common Issues
-      </li>
-    </ol>
-    <ol>
+    <button class="dropdown-btn">
+      <h3>Sighting</h3>
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+
+      <a href="Dominant-Eye-Test.html">Dominant Eye Test</a>
+      <a href="Dominant-Eye-Test.html">Finding the Central Line and Eye Patterns
+      </a>
+      <a href="Dominant-Eye-Test.html">Common Issues</a>
+
+    </div>
+    <button class="dropdown-btn">
       <h3>Beginner Aiming Techniques</h3>
-      <li>
-        <a href="Ghost-Ball-Aiming.html">Ghost Ball Aiming</a>
-      </li>
-      <li>
-        Contact Point Aiming
-      </li>
-      <li>
-        Shaft Aiming/Edge of the Ferule Aiming
-      </li>
-      <li>
-        Online Aiming
-      </li>
-    </ol>
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <ol>
+        <li>
+          <a href="Ghost-Ball-Aiming.html">Ghost Ball Aiming</a>
+        </li>
+        <li>
+          Contact Point Aiming
+        </li>
+        <li>
+          Shaft Aiming/Edge of the Ferule Aiming
+        </li>
+        <li>
+          Online Aiming
+        </li>
+      </ol>
+    </div>
   </div>
   <div class="intro-container">
-    <div class="intro">
-      <h1>Beginner Cue Sports</h1>
+    <main>
+      <h1>Cue Like a Pro</h1>
       <p>
         I would like to document a few of the aiming techniques I have learned so far to play pool.
         I first started with Ghost Ball Aiming then transitioned to Shaft Aiming and then eventually onto Contact Point Aiming.
@@ -59,8 +70,33 @@
         The fourth section will look at body alignment which in my opinion is critical to the game.
 
       </p>
-    </div>
+    </main>
   </div>
+
+  <footer>
+    <p>
+      &copy; Cue Sports United
+    </p>
+  </footer>
+
+  <script>
+    /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+
+    for (i = 0; i < dropdown.length; i++) {
+      dropdown[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+          dropdownContent.style.display = "none";
+        } else {
+          dropdownContent.style.display = "block";
+        }
+      });
+    }
+  </script>
+
 
 </body>
 
